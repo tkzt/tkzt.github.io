@@ -10,6 +10,9 @@ const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBh
 const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
 const reactor = ref(new DeviceUUID().get())
 
+// try to solve DeviceUUID-undefined problem
+console.log(DeviceUUID)
+
 async function react(reaction: string) {
   await supabase
   .from('home-reactions')
