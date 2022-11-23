@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import { EmojiReaction } from 'emoji-reaction'
 import { DeviceUUID } from 'device-uuid'
 import { createClient } from '@supabase/supabase-js'
@@ -8,7 +8,7 @@ const SUPABASE_URL = 'https://kjslqwyilnpzselvwdib.supabase.co'
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtqc2xxd3lpbG5wenNlbHZ3ZGliIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjkxODI0MjMsImV4cCI6MTk4NDc1ODQyM30.ePHLfYPvu4E5Ts_CVJo3wUXTnc6L0tEMuzQ-SX0bDDo'
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
-const reactor = ref(new DeviceUUID().get())
+const reactor = ref('')
 
 async function react(reaction: string) {
   await supabase
@@ -43,6 +43,10 @@ async function getReactions() {
       return pre
     }, [])
 }
+
+onMounted(()=>{
+  reactor.value = new DeviceUUID().get();
+})
 </script>
 
 <template>
