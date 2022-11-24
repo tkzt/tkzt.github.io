@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref } from 'vue'
 import { EmojiReaction } from 'emoji-reaction'
-import { DeviceUUID } from 'device-uuid'
+import FingerprintJS from '@fingerprintjs/fingerprintjs'
 import { createClient } from '@supabase/supabase-js'
 
 const SUPABASE_URL = 'https://kjslqwyilnpzselvwdib.supabase.co'
@@ -9,6 +9,13 @@ const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBh
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
 const reactor = ref('')
+
+const fpPromise = FingerprintJS.load();
+(async () => {
+  const fp = await fpPromise
+  const result = await fp.get()
+  reactor.value = result.visitorId
+})()
 
 async function react(reaction: string) {
   await supabase
@@ -43,10 +50,6 @@ async function getReactions() {
       return pre
     }, [])
 }
-
-onMounted(()=>{
-  reactor.value = new DeviceUUID().get();
-})
 </script>
 
 <template>
