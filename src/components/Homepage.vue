@@ -55,9 +55,44 @@ async function getReactions() {
 <template>
   <div class="container">
     <h1 class="title">Hello.</h1>
-    <h3 class="divider subtitle">My name is Allen Tao.</h3>
-    <p class="paragraph">I am a software developer, <span class="underline">a fine-weather-photography</span> enthusiast, a rookie in contributing to open source projects.</p>
-    <p class="paragraph">In spare time, I'm keen on developing some <span class="underline">individual projects</span> and expect to become an awesome independent software developer some day.</p>
+    <h3 class="divider subtitle">
+      <ruby>
+        吾姓陶名康，自號清秋。
+        <rt>My name is Allen Tao, aka Qingqiu.</rt>
+      </ruby>
+    </h3>
+    <p class="paragraph">
+      <ruby>
+        一名新生代農民工
+        <rt>
+          A plain software developer
+        </rt>
+      </ruby>
+    </p>
+    <p class="paragraph">
+      <ruby>
+        一個<router-link to="/fine-weather-gallery" class="underline">好天氣攝影</router-link>愛好者
+        <rt>
+          Love taking photos when sunny
+        </rt>
+      </ruby>
+    </p>
+    <p class="paragraph">
+      <ruby>
+        會一些花拳綉腿，有幾個<router-link to="/boring-plans" class="underline">拙劣作品</router-link>
+        <rt>
+          Keen on developing some individual projects
+        </rt>
+      </ruby>
+    </p>
+    <p class="paragraph">
+      <ruby>
+        偶爾寫一些<a href="https://n-notes.tkzt.cn" class="underline" target="_blank">博客</a>
+        <rt>
+          Have a blog site
+        </rt>
+      </ruby>
+    </p>
     <p class="divider filled"></p>
     <div class="emoji-reaction">
         <emoji-reaction
@@ -141,7 +176,16 @@ async function getReactions() {
 .paragraph {
     font-size: 1.2rem;
     color: rgba(0, 0, 0, .78);
-    text-align: justify;
+}
+
+.paragraph > ruby {
+  ruby-align: left;
+}
+
+.paragraph::before {
+  content: '*';
+  margin-right: 12px;
+  font-size: xx-small;
 }
 
 .footer{
@@ -153,6 +197,16 @@ async function getReactions() {
 
 .emoji-reaction{
   font-family: initial;
+}
+
+@media screen and (max-width: 400px) {
+  .paragraph > ruby > rt {
+      display: none;
+  }
+
+  .paragraph {
+    font-size: medium;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -171,6 +225,8 @@ async function getReactions() {
   display: inline-block;
   position: relative;
   cursor: pointer;
+  color: inherit;
+  text-decoration: none;
 }
 
 .underline::after {
@@ -188,7 +244,10 @@ async function getReactions() {
 }
 
 .underline:hover::after {
-  height: 8px;
   opacity: .8;
+}
+
+.underline:hover{
+  color: initial;
 }
 </style>
