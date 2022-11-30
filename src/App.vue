@@ -1,12 +1,3 @@
 <template>
-  <main>
-    <RouterView />
-  </main>
+  <RouterView />
 </template>
-
-<style scoped>
-main {
-  display: flex;
-  min-height: 100vh;
-}
-</style>
