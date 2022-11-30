@@ -1,5 +1,5 @@
 <template>
-  <main :class="{ 'scrollbar-hidden': imageDetailModel }">
+  <main>
     <article>
       <div class="preface">
         <h1>一些晴朗的日子</h1>
