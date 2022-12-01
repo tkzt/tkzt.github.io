@@ -40,7 +40,7 @@
 </template>
 
 <script setup>
-import { ref, watch } from 'vue';
+import { onMounted, ref, watch } from 'vue';
 import { useWindowSize } from '@vueuse/core';
 import 'animate.css';
 
@@ -75,6 +75,16 @@ watch(() => windowWidth.value, (val) => {
 });
 
 const folded = ref(false);
+
+onMounted(() => {
+  if (windowWidth.value > 900) {
+    metaEnterActiveClass.value = 'animate__animated animate__slideInRight';
+    metaLeaveActiveClass.value = 'animate__animated animate__slideOutRight';
+  } else {
+    metaEnterActiveClass.value = 'animate__animated animate__slideInUp';
+    metaLeaveActiveClass.value = 'animate__animated animate__slideOutDown';
+  }
+});
 </script>
 
 <style scoped>
