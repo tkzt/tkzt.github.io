@@ -474,6 +474,7 @@ article {
 
 footer {
   padding: 24px;
+  padding-top: 0;
   text-align: center;
 }
 
