@@ -7,7 +7,7 @@ specifiers:
   '@vueuse/core': ^9.6.0
   animate.css: ^4.1.1
   blurhash: ^2.0.4
-  emoji-reaction: ^2.0.0
+  emoji-reaction: ^2.0.1
   eslint: ^7.32.0 || ^8.2.0
   eslint-config-airbnb-base: ^15.0.0
   eslint-import-resolver-alias: ^1.1.2
@@ -23,7 +23,7 @@ dependencies:
   '@vueuse/core': registry.npmmirror.com/@vueuse/core/9.6.0_vue@3.2.45
   animate.css: registry.npmmirror.com/animate.css/4.1.1
   blurhash: registry.npmmirror.com/blurhash/2.0.4
-  emoji-reaction: registry.npmmirror.com/emoji-reaction/2.0.0_vue@3.2.45
+  emoji-reaction: registry.npmmirror.com/emoji-reaction/2.0.1_vue@3.2.45
   vue: registry.npmmirror.com/vue/3.2.45
   vue-router: registry.npmmirror.com/vue-router/4.1.6_vue@3.2.45
 
@@ -692,11 +692,11 @@ packages:
       esutils: registry.npmmirror.com/esutils/2.0.3
     dev: true
 
-  registry.npmmirror.com/emoji-reaction/2.0.0_vue@3.2.45:
-    resolution: {integrity: sha512-umxs5L9GPkJGzea9xDzPaCXucxy0hH7gu9Zg17Y//hXKATFNIPGw0EqgtuOYHMLJ6mb0sV7d+qkxqI+fWjusyg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/emoji-reaction/-/emoji-reaction-2.0.0.tgz}
-    id: registry.npmmirror.com/emoji-reaction/2.0.0
+  registry.npmmirror.com/emoji-reaction/2.0.1_vue@3.2.45:
+    resolution: {integrity: sha512-qXqkhLcpRzfSh7u9GA39pJIXf8q5wij1vSi2jB3Hnki6/H+iONsSGGT1Nj88hBOlvC4D++agZJ0UpG8MpNjlfg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/emoji-reaction/-/emoji-reaction-2.0.1.tgz}
+    id: registry.npmmirror.com/emoji-reaction/2.0.1
     name: emoji-reaction
-    version: 2.0.0
+    version: 2.0.1
     peerDependencies:
       vue: ^3.2.13
     dependencies:
