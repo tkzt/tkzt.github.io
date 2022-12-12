@@ -72,7 +72,7 @@ async function getReactions() {
       </p>
       <p class="paragraph">
         <ruby>
-          一個<router-link to="/fine-weather-gallery" class="underline">好天氣攝影</router-link>愛好者
+          一個<a href="https://fine-weather-gallery.tkzt.cn" target="_blank" class="underline">好天氣攝影</a>愛好者
           <rt>
             Love taking photos when sunny
           </rt>
