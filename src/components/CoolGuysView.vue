@@ -3,13 +3,13 @@
         <section>
             <article>
                 <div>
-                    <p>是的，这是一个友情链接页面。</p>
+                    <p>是的，這是一個友情鏈接頁面。</p>
                     <p>
-                        主要致敬一些
+                        主要用來致敬一些
                         <ruby>好看的<rt>Beautiful</rt></ruby>
                         或者
                         <ruby>好看的<rt>Awesome Content</rt></ruby>
-                        网站。
+                        網站。
                     </p>
                     <ul>
                         <li v-for="{title, href}, index in coolGuys" :key="index">
