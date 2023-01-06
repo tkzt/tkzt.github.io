@@ -13,7 +13,7 @@
                     </p>
                     <ul>
                         <li v-for="{title, href}, index in coolGuys" :key="index">
-                            <a :href="href">{{ title }}</a>
+                            <a :href="href" target="_blank">{{ title }}</a>
                         </li>
                     </ul>
                 </div>
