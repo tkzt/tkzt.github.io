@@ -37,8 +37,8 @@ import { ref } from 'vue';
 const coolGuys = ref([
   { title: '祖师爷', href: 'https://evanyou.me/' },
   { title: 'Anthony Fu', href: 'https://antfu.me/' },
-  { title: '李辉 | Web 开发者，写作爱好者', href: 'https://greyli.com/neighbors/' },
-  { title: 'skonhed.studio', href: 'https://skonhed.studio/' },
+  { title: '李辉 | Web 开发者，写作爱好者', href: 'https://greyli.com/' },
+  { title: 'Skonhed Studio', href: 'https://skonhed.studio/' },
 ]);
 </script>
 
