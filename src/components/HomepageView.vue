@@ -114,7 +114,7 @@ async function getReactions() {
           <i class="fab fa-github icon"></i>
         </a>
         <span class="divider-vertical">-</span>
-        <router-link title="Next" class="text-link" to="/cool-guys">下一首</router-link>
+        <router-link title="Next" class="text-link" to="/cool-guys">傳送</router-link>
       </footer>
     </div>
   </main>
