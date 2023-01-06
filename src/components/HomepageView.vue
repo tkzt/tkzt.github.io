@@ -102,8 +102,10 @@ async function getReactions() {
       <p class="divider filled"></p>
       <footer>
         &copy;&nbsp;
-        <small>2022{{ 2022 === new Date().getFullYear() ? '' : ' - Present' }}&nbsp;Allen
-          Tao</small>
+        <small>
+          2022{{ 2022 === new Date().getFullYear() ? '' : ' - Present' }}&nbsp;
+          Allen Tao
+        </small>
         <span class="divider-vertical">-</span>
         <a href="mailto:taoqingqiu@gmail.com" class="icon-link">
           <i class="fa-regular fa-envelope icon"></i>
@@ -111,6 +113,8 @@ async function getReactions() {
         <a href="https://github.com/boring-plans" class="icon-link">
           <i class="fab fa-github icon"></i>
         </a>
+        <span class="divider-vertical">-</span>
+        <router-link title="Next" class="text-link" to="/cool-guys">下一首</router-link>
       </footer>
     </div>
   </main>
@@ -127,7 +131,6 @@ main {
   margin: auto;
   padding: 24px;
   width: 80%;
-  width: fit-content;
   position: relative;
 }
 
@@ -139,12 +142,6 @@ main {
 .divider.filled {
   height: 12px;
   margin-bottom: 0;
-}
-
-.divider-vertical {
-  font-size: xx-small;
-  margin: 0 1rem;
-  transform: rotate(90deg);
 }
 
 .icon {
@@ -194,19 +191,12 @@ main {
   font-size: xx-small;
 }
 
-footer {
-  display: flex;
-  align-items: center;
-  color: rgba(0, 0, 0, .27);
-  font-size: small;
-}
-
 .emoji-reaction {
   font-family: initial;
 }
 
 @media screen and (max-width: 400px) {
-  .paragraph>ruby>rt {
+  .paragraph > ruby > rt {
     display: none;
   }
 
@@ -276,10 +266,6 @@ footer {
 
   .underline:hover {
     color: rgba(255, 255, 255, 1);
-  }
-
-  footer {
-    color: rgba(255, 255, 255, .27);
   }
 
   .icon {

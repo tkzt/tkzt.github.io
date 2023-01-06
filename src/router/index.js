@@ -11,6 +11,11 @@ const routes = [
     name: 'Boring Plans',
     component: () => import('@/components/BoringPlansView.vue'),
   },
+  {
+    path: '/cool-guys',
+    name: 'Cool Guys',
+    component: () => import('@/components/CoolGuysView.vue'),
+  },
 ];
 
 export default createRouter({
