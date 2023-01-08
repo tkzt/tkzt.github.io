@@ -106,13 +106,15 @@ async function getReactions() {
           2022{{ 2022 === new Date().getFullYear() ? '' : ' - Present' }}&nbsp;
           Allen Tao
         </small>
-        <span class="divider-vertical">-</span>
-        <a href="mailto:taoqingqiu@gmail.com" class="icon-link">
-          <i class="fa-regular fa-envelope icon"></i>
-        </a>
-        <a href="https://github.com/boring-plans" class="icon-link">
-          <i class="fab fa-github icon"></i>
-        </a>
+        <span class="sm-hidden">
+          <span class="divider-vertical">-</span>
+          <a href="mailto:taoqingqiu@gmail.com" class="icon-link">
+            <i class="fa-regular fa-envelope icon"></i>
+          </a>
+          <a href="https://github.com/boring-plans" class="icon-link">
+            <i class="fab fa-github icon"></i>
+          </a>
+        </span>
         <span class="divider-vertical">-</span>
         <router-link title="Next" class="text-link" to="/cool-guys">傳送</router-link>
       </footer>
@@ -195,13 +197,22 @@ main {
   font-family: initial;
 }
 
-@media screen and (max-width: 400px) {
+.sm-hidden {
+  display: inline-flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 500px) {
   .paragraph > ruby > rt {
     display: none;
   }
 
   .paragraph {
     font-size: medium;
+  }
+
+  .sm-hidden {
+    display: none;
   }
 }
 
