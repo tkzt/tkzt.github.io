@@ -43,7 +43,6 @@
     <emoji-reaction react-to="tkzt.cn" :reactor="reactor" :react="react" :unreact="unreact"
       :getReactions="getReactions" />
   </div>
-  <p class="divider-filled"></p>
 </template>
 
 <script setup>

@@ -1,8 +1,5 @@
 <template>
-  <div class="container">
-    <div id="waline"></div>
-  </div>
-  <p class="divider-filled"></p>
+  <div id="waline"></div>
 </template>
 
 <script setup>

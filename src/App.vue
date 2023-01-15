@@ -2,6 +2,7 @@
   <main>
     <div class="container">
       <router-view />
+      <p class="divider-filled"></p>
       <footer>
         <div class="d-flex align-center">
           &copy; 2022 <span class="divider-short-dash">-</span> Present

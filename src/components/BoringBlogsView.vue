@@ -18,7 +18,6 @@
             </li>
         </ul>
     </div>
-    <p class="divider-filled"></p>
 </template>
 
 <script setup>
