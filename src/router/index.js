@@ -16,6 +16,16 @@ const routes = [
     name: 'Cool Guys',
     component: () => import('@/components/CoolGuysView.vue'),
   },
+  {
+    path: '/boring-blogs',
+    name: 'Boring Blogs',
+    component: () => import('@/components/BoringBlogsView.vue'),
+  },
+  {
+    path: '/leave-a-message',
+    name: 'Leave A Message',
+    component: () => import('@/components/LeaveMessageView.vue'),
+  },
 ];
 
 export default createRouter({

@@ -1,7 +1,6 @@
 <template>
     <div>
         Under construction :)
-        <br />
-        <RouterLink to="/">Back</RouterLink>
+        <p class="divider-filled"></p>
     </div>
 </template>

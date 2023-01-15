@@ -1,0 +1,121 @@
+@import "https://cdn.jsdelivr.net/npm/meslo@1.0.0/meslo.min.css";
+@import url('./atomic.css');
+
+:root {
+  --tkzt-primary: #c4b5fd;
+  --tkzt-primary-dark: #a78bfa;
+}
+
+body {
+  font-family: meslo, "楷体";
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 1em;
+  background-color: rgba(0, 0, 0, 0.2);
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.divider {
+  font-size: xx-small;
+  margin: 3.7vh 0;
+}
+
+.divider-filled {
+  font-size: xx-small;
+  margin: 3.7vh 0;
+  height: 12px;
+  margin-bottom: 0;
+}
+
+.divider-vertical {
+  font-size: xx-small;
+  margin: 0 1rem;
+  transform: rotate(90deg);
+  font-family: initial;
+}
+
+.divider-short-dash {
+  font-family: initial;
+  margin: 0 4px;
+}
+
+.text-link {
+  font-size: small;
+  outline: none;
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+.text-link:hover {
+  text-decoration: underline;
+}
+
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 15px;
+  height: 15px;
+  padding: 3px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: rgba(0, 0, 0, .27);
+}
+
+.icon:hover {
+  background-color: rgba(0, 0, 0, .06);
+}
+
+.icon-link {
+  height: 21px;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --tkzt-primary: #7c3aed;
+    --tkzt-primary-dark: #6d28d9;
+  }
+
+  body {
+    background-color: #272727;
+    color: white;
+  }
+
+  a {
+    color: #c4b5fd;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .icon {
+    color: rgba(255, 255, 255, .27);
+  }
+
+  .icon:hover {
+    background-color: rgba(255, 255, 255, .06);
+  }
+}
+
+/* Waline Customizations */
+:root {
+  --waline-theme-color: var(--tkzt-primary) !important;
+  --waline-active-color: var(--tkzt-primary-dark) !important;
+}

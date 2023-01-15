@@ -1,3 +1,51 @@
+<template>
+  <h1 class="title">Hello.</h1>
+  <h3 class="divider subtitle">
+    <ruby>
+      吾姓陶名康，自號清秋。
+      <rt>My name is Allen Tao, aka Qingqiu.</rt>
+    </ruby>
+  </h3>
+  <p class="paragraph">
+    <ruby>
+      一名新生代農民工
+      <rt>
+        A plain software developer
+      </rt>
+    </ruby>
+  </p>
+  <p class="paragraph">
+    <ruby>
+      一個<a href="https://fine-weather-gallery.tkzt.cn" target="_blank" class="underline">好天氣攝影</a>愛好者
+      <rt>
+        Love taking photos when sunny
+      </rt>
+    </ruby>
+  </p>
+  <p class="paragraph">
+    <ruby>
+      會一些花拳綉腿，有幾個<router-link to="/boring-plans" class="underline">拙劣作品</router-link>
+      <rt>
+        Keen on developing some individual projects
+      </rt>
+    </ruby>
+  </p>
+  <p class="paragraph">
+    <ruby>
+      偶爾寫一些<router-link to="/boring-blogs" class="underline">博客</router-link>
+      <rt>
+        Have a blog site
+      </rt>
+    </ruby>
+  </p>
+  <p class="divider-filled"></p>
+  <div class="emoji-reaction">
+    <emoji-reaction react-to="tkzt.cn" :reactor="reactor" :react="react" :unreact="unreact"
+      :getReactions="getReactions" />
+  </div>
+  <p class="divider-filled"></p>
+</template>
+
 <script setup>
 import { ref } from 'vue';
 import { EmojiReaction } from 'emoji-reaction';
@@ -52,121 +100,7 @@ async function getReactions() {
 }
 </script>
 
-<template>
-  <main>
-    <div class="container">
-      <h1 class="title">Hello.</h1>
-      <h3 class="divider subtitle">
-        <ruby>
-          吾姓陶名康，自號清秋。
-          <rt>My name is Allen Tao, aka Qingqiu.</rt>
-        </ruby>
-      </h3>
-      <p class="paragraph">
-        <ruby>
-          一名新生代農民工
-          <rt>
-            A plain software developer
-          </rt>
-        </ruby>
-      </p>
-      <p class="paragraph">
-        <ruby>
-          一個<a href="https://fine-weather-gallery.tkzt.cn" target="_blank" class="underline">好天氣攝影</a>愛好者
-          <rt>
-            Love taking photos when sunny
-          </rt>
-        </ruby>
-      </p>
-      <p class="paragraph">
-        <ruby>
-          會一些花拳綉腿，有幾個<router-link to="/boring-plans" class="underline">拙劣作品</router-link>
-          <rt>
-            Keen on developing some individual projects
-          </rt>
-        </ruby>
-      </p>
-      <p class="paragraph">
-        <ruby>
-          偶爾寫一些<a href="https://n-notes.tkzt.cn" class="underline" target="_blank">博客</a>
-          <rt>
-            Have a blog site
-          </rt>
-        </ruby>
-      </p>
-      <p class="divider filled"></p>
-      <div class="emoji-reaction">
-        <emoji-reaction react-to="tkzt.cn" :reactor="reactor" :react="react" :unreact="unreact"
-          :getReactions="getReactions" />
-      </div>
-      <p class="divider filled"></p>
-      <footer>
-        &copy;&nbsp;
-        <small>
-          2022{{ 2022 === new Date().getFullYear() ? '' : ' - Present' }}&nbsp;
-          Allen Tao
-        </small>
-        <span class="sm-hidden">
-          <span class="divider-vertical">-</span>
-          <a href="mailto:taoqingqiu@gmail.com" class="icon-link">
-            <i class="fa-regular fa-envelope icon"></i>
-          </a>
-          <a href="https://github.com/boring-plans" class="icon-link">
-            <i class="fab fa-github icon"></i>
-          </a>
-        </span>
-        <span class="divider-vertical">-</span>
-        <router-link title="Next" class="text-link" to="/cool-guys">傳送</router-link>
-      </footer>
-    </div>
-  </main>
-</template>
-
 <style scoped>
-main {
-  background-color: white;
-  min-height: 100vh;
-  display: flex;
-}
-
-.container {
-  margin: auto;
-  padding: 24px;
-  width: 80%;
-  position: relative;
-}
-
-.divider {
-  font-size: xx-small;
-  margin: 3.7vh 0;
-}
-
-.divider.filled {
-  height: 12px;
-  margin-bottom: 0;
-}
-
-.icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 15px;
-  height: 15px;
-  padding: 3px;
-  border-radius: 50%;
-  cursor: pointer;
-  color: rgba(0, 0, 0, .27);
-}
-
-.icon:hover {
-  background-color: rgba(0, 0, 0, .06);
-}
-
-.icon-link {
-  height: 21px;
-  text-decoration: none;
-}
-
 .title {
   font-weight: bolder;
   font-size: 3.3rem;
@@ -197,12 +131,7 @@ main {
   font-family: initial;
 }
 
-.sm-hidden {
-  display: inline-flex;
-  align-items: center;
-}
-
-@media screen and (max-width: 500px) {
+@media (max-width: 500px) {
   .paragraph > ruby > rt {
     display: none;
   }
@@ -213,18 +142,6 @@ main {
 
   .sm-hidden {
     display: none;
-  }
-}
-
-@media screen and (min-width: 1400px) {
-  .container {
-    width: 62%;
-  }
-}
-
-@media screen and (min-width: 1920px) {
-  .container {
-    width: 37%;
   }
 }
 
@@ -242,7 +159,7 @@ main {
   position: absolute;
   height: 6px;
   width: 100%;
-  background-color: #c4b5fd;
+  background-color: var(--tkzt-primary);
   left: 0;
   bottom: 3px;
   border-radius: 2px;
@@ -251,7 +168,7 @@ main {
 }
 
 .underline:hover::before {
-  background-color: #a78bfa;
+  background-color: var(--tkzt-primary-dark);
 }
 
 .underline:hover {
@@ -259,32 +176,12 @@ main {
 }
 
 @media (prefers-color-scheme: dark) {
-  main {
-    background-color: #272727;
-  }
-
   .paragraph {
     color: rgba(255, 255, 255, .85);
   }
 
-  .underline::before {
-    background-color: #7c3aed;
-  }
-
-  .underline:hover::before {
-    background-color: #6d28d9;
-  }
-
   .underline:hover {
     color: rgba(255, 255, 255, 1);
-  }
-
-  .icon {
-    color: rgba(255, 255, 255, .27);
-  }
-
-  .icon:hover {
-    background-color: rgba(255, 255, 255, .06);
   }
 }
 </style>
