@@ -12,12 +12,11 @@
     "@fingerprintjs/fingerprintjs": "^3.3.6",
     "@supabase/supabase-js": "^2.1.1",
     "@vueuse/core": "^9.6.0",
-    "animate.css": "^4.1.1",
+    "@waline/client": "^2.14.6",
     "blurhash": "^2.0.4",
     "emoji-reaction": "^2.0.1",
     "vue": "^3.2.41",
-    "vue-router": "^4.1.6",
-    "@waline/client": "^2.14.6"
+    "vue-router": "^4.1.6"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.2.0",
