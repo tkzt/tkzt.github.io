@@ -1,6 +1,6 @@
 <template>
     <div v-if="loading">Loading..</div>
-    <div v-for="{ list, year }, index in articles" :key="index" class="container">
+    <div v-for="{ list, year }, index in articles" :key="index" class="articles">
         <h3>{{ year }}</h3>
         <ul>
             <li
@@ -50,11 +50,11 @@ onMounted(async () => {
 </script>
 
 <style scoped>
-.container .text-link {
+.articles .text-link {
     font-size: medium;
 }
 
-.container h3:nth-of-type(n+2) {
+.articles h3:nth-of-type(n+2) {
     margin-top: 36px;
 }
 </style>
