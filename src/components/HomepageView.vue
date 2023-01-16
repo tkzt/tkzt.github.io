@@ -116,7 +116,7 @@ async function getReactions() {
   color: rgba(0, 0, 0, .85);
 }
 
-.paragraph>ruby {
+.paragraph > ruby {
   ruby-align: left;
 }
 
@@ -131,10 +131,6 @@ async function getReactions() {
 }
 
 @media (max-width: 500px) {
-  .paragraph > ruby > rt {
-    display: none;
-  }
-
   .paragraph {
     font-size: medium;
   }
