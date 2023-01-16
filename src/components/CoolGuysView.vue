@@ -10,7 +10,7 @@
     <p class="divider-filled"></p>
     <ul>
         <li v-for="{title, href}, index in coolGuys" :key="index">
-            <a :href="href" target="_blank">{{ title }}</a>
+            <a :href="href" target="_blank" class="text-link">{{ title }}</a>
         </li>
     </ul>
 </template>

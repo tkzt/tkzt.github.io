@@ -51,10 +51,10 @@ onMounted(async () => {
 
 <style scoped>
 .articles .text-link {
-    font-size: medium;
+  font-size: medium;
 }
 
 .articles h3:nth-of-type(n+2) {
-    margin-top: 36px;
+  margin-top: 36px;
 }
 </style>

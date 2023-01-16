@@ -26,6 +26,11 @@ const routes = [
     name: 'Leave A Message',
     component: () => import('@/components/LeaveMessageView.vue'),
   },
+  {
+    path: '/contact',
+    name: 'Contact',
+    component: () => import('@/components/ContactView.vue'),
+  },
 ];
 
 export default createRouter({

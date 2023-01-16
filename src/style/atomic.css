@@ -1,3 +1,10 @@
+.plain {
+  margin: 0;
+  padding: 0;
+  font-size: initial;
+  font-weight: initial;
+}
+
 .d-flex {
   display: flex;
 }
@@ -5,3 +12,16 @@
 .align-center {
   align-items: center;
 }
+
+.font-sm {
+  font-size: small;
+}
+
+.font-md {
+  font-size: medium;
+}
+
+.font-lg {
+  font-size: 1.5rem;
+}
+

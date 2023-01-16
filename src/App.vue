@@ -8,20 +8,22 @@
           &copy; 2022 <span class="divider-short-dash">-</span> Present
           Allen Tao
           <span class="divider-vertical">-</span>
-          <router-link title="Next" class="text-link" to="/cool-guys" v-if="route.path==='/'">
-            傳送
-          </router-link>
-          <router-link title="Next" class="text-link" to="/" v-else>回城</router-link>
+          <router-link
+            title="Teleport"
+            class="text-link font-sm"
+            to="/cool-guys"
+            v-if="route.path==='/'"
+          >傳送</router-link>
+          <router-link title="Recall" class="text-link font-sm" to="/" v-else>回城</router-link>
         </div>
         <div class="d-flex align-center" v-if="route.path==='/'">
-          <router-link title="Next" class="text-link" to="/leave-a-message">留言</router-link>
+          <router-link
+            title="Leave a message"
+            class="text-link"
+            to="/leave-a-message"
+          >留言</router-link>
           <span class="divider-vertical">-</span>
-          <a href="mailto:taoqingqiu@gmail.com" class="icon-link">
-            <i class="fa-regular fa-envelope icon"></i>
-          </a>
-          <a href="https://github.com/boring-plans" class="icon-link">
-            <i class="fab fa-github icon"></i>
-          </a>
+          <router-link title="Contact" class="text-link font-sm" to="/contact">聯係</router-link>
         </div>
       </footer>
     </div>

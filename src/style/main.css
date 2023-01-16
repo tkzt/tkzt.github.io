@@ -50,7 +50,6 @@ body {
 }
 
 .text-link {
-  font-size: small;
   outline: none;
   cursor: pointer;
   color: inherit;
@@ -91,10 +90,6 @@ body {
   body {
     background-color: #272727;
     color: white;
-  }
-
-  a {
-    color: #c4b5fd;
   }
 
   ::-webkit-scrollbar-thumb {
