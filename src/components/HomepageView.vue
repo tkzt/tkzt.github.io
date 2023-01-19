@@ -134,10 +134,6 @@ async function getReactions() {
   .paragraph {
     font-size: medium;
   }
-
-  .sm-hidden {
-    display: none;
-  }
 }
 
 .underline {
