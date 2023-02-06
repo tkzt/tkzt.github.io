@@ -6,5 +6,4 @@ Tech used:
 - [Supabase](https://supabase.com/)
 - [Emoji Reaction](https://github.com/boring-plans/emoji-reaction)
 - [Waline](https://waline.js.org/)
-- [Blurhash](https://blurha.sh/)
-- [...](https://github.com/boring-plans/boring-plans.github.io/blob/main/package.json)
+- [...](https://github.com/tkzt/tkzt.github.io/blob/main/package.json)
