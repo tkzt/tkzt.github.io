@@ -47,7 +47,7 @@
     cursor: pointer;
     position: relative;
     flex-shrink: 0;
-    width: 100%;
+    width: calc(100% - 24px);
     margin: 12px;
 }
 
