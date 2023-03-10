@@ -17,6 +17,8 @@ module.exports = {
     'vue',
   ],
   rules: {
+    'space-before-function-paren': 'off',
+    'max-len': 'off',
   },
   settings: {
     'import/resolver': {
