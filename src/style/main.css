@@ -85,8 +85,8 @@ body {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --tkzt-primary: #c4b5fd;
-    --tkzt-primary-dark: #a78bfa;
+    --tkzt-primary-dark: #c4b5fd;
+    --tkzt-primary: #a78bfa;
   }
 
   body {
