@@ -10,11 +10,24 @@
       </div>
     </div>
   </div>
-  <h3>Live</h3>
+
+  <h3>Alive</h3>
   <div class="d-flex">
     <div class="work" v-for="{ title, link, description, logo }, index in works" :key="index"
       @click="toWork(link)">
       <img :src="logo">
+      <div class="work-info">
+        <h4 :title="title">{{ title }}</h4>
+        <p :title="description">{{ description }}</p>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="gray-text">Dead</h3>
+  <div class="d-flex gray-text" style="overflow: hidden;">
+    <div class="work" v-for="{ title, link, description, logo }, index in worksDead" :key="index"
+      @click="toWork(link)">
+      <img :src="logo" :alt="title + ' Logo'" class="gray">
       <div class="work-info">
         <h4 :title="title">{{ title }}</h4>
         <p :title="description">{{ description }}</p>
@@ -26,11 +39,6 @@
 <style scoped>
 .d-flex {
   flex-wrap: wrap;
-}
-
-.work>img {
-  width: 40px;
-  height: 40px;
 }
 
 .work {
@@ -63,6 +71,11 @@
   background-color: rgba(0, 0, 0, .06);
 }
 
+.work img {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
 .work-info {
   margin-left: 8px;
   overflow: hidden;
@@ -81,6 +94,18 @@
   width: 100%;
 }
 
+.gray {
+  position: relative;
+  transform: translateX(-100px);
+  filter: drop-shadow(rgba(0, 0, 0, .37) 100px 0 0);
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+}
+
+.gray-text {
+  color: rgba(0, 0, 0, .37);
+}
+
 @media (prefers-color-scheme: dark) {
   .work:hover::before {
     background-color: rgba(255, 255, 255, .037);
@@ -88,6 +113,14 @@
 
   .work:active::before {
     background-color: rgba(255, 255, 255, .06);
+  }
+
+  .gray {
+    filter: drop-shadow(rgba(255, 255, 255, .37) 100px 0 0);
+  }
+
+  .gray-text {
+    color: rgba(255, 255, 255, .37);
   }
 
 }
@@ -140,14 +173,22 @@ const works = reactive([
 ]);
 const worksBuilding = reactive([
   {
+    title: 'Qiuying RPA',
+    link: 'https://github.com/qiuying-rpa',
+    logo: 'https://raw.githubusercontent.com/qiuying-rpa/designer/f9650405849c730eaf6c25be049895c4f7d1df23/public/qiuying.svg',
+    description: '众所周知，秋英是一种有着小而美花的植物',
+  },
+]);
+const worksDead = reactive([
+  {
     title: 'TMD Editor',
     link: 'https://github.com/boring-plans/tmd-editor',
-    logo: new URL('../assets/tmd.svg', import.meta.url).href,
+    logo: 'https://raw.githubusercontent.com/tkzt/tmd-editor/263a9a01078712eb0ca4c4a6f2d7a3f71504e0d7/public/tmd.svg',
     description: 'A simple ProseMirror based markdown editor.',
   },
 ]);
 
-function toWork (link) {
+function toWork(link) {
   const a = document.createElement('a');
   a.href = link;
   a.target = '_blank';

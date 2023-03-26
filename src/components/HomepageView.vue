@@ -116,7 +116,7 @@ async function getReactions() {
   color: rgba(0, 0, 0, .85);
 }
 
-.paragraph > ruby {
+.paragraph>ruby {
   ruby-align: left;
 }
 
