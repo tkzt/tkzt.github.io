@@ -19,6 +19,7 @@ module.exports = {
   rules: {
     'space-before-function-paren': 'off',
     'max-len': 'off',
+    'comma-dangle': 'off',
   },
   settings: {
     'import/resolver': {

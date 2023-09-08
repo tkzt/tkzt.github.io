@@ -83,6 +83,20 @@ body {
   text-decoration: none;
 }
 
+
+.gray-text {
+  color: rgba(0, 0, 0, .37);
+  overflow: hidden;
+}
+
+.gray-text img {
+  position: relative;
+  transform: translateX(-100px);
+  filter: drop-shadow(rgba(0, 0, 0, .37) 100px 0 0);
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --tkzt-primary-dark: #c4b5fd;
@@ -108,6 +122,18 @@ body {
 
   .icon:hover {
     background-color: rgba(255, 255, 255, .06);
+  }
+
+  .gray-text {
+    color: rgba(255, 255, 255, .37);
+  }
+
+  .gray-text img {
+    filter: drop-shadow(rgba(255, 255, 255, .37) 100px 0 0);
+  }
+
+  .gray-text h3 {
+    color: rgba(255, 255, 255, .37);
   }
 }
 

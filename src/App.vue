@@ -59,13 +59,13 @@ footer {
 
 @media (min-width: 1400px) {
   .container {
-    width: 52%;
+    width: 70%;
   }
 }
 
 @media (min-width: 1920px) {
   .container {
-    width: 37%;
+    width: 60%;
   }
 }
 
