@@ -71,6 +71,12 @@ const works = [
               description: '熟悉的 BGM 响起，事情却不一样了起来',
             },
             {
+              title: '一些晴朗的日子',
+              link: 'https://fine-weather-gallery.tkzt.cn/',
+              logo: 'https://fine-weather-gallery.tkzt.cn/fine-weather-gallery.ico',
+              description: '一个相册应用'
+            },
+            {
               title: 'Vue SJV',
               link: 'https://github.com/tkzt/vue-sjv',
               logo: 'SJV',
