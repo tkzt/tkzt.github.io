@@ -14,8 +14,8 @@ dependencies:
     specifier: ^2.14.6
     version: 2.14.6
   emoji-reaction:
-    specifier: ^2.1.0
-    version: 2.1.0(vue@3.2.45)
+    specifier: ^2.1.1
+    version: 2.1.1(vue@3.2.45)
   vue:
     specifier: ^3.2.41
     version: registry.npmmirror.com/vue@3.2.45
@@ -876,8 +876,8 @@ packages:
     resolution: {integrity: sha512-jtD6YG370ZCIi/9GTaJKQxWTZD045+4R4hTk/x1UyoqadyJ9x9CgSi1RlVDQF8U2sxLLSnFkCaMihqljHIWgMg==}
     dev: true
 
-  /emoji-reaction@2.1.0(vue@3.2.45):
-    resolution: {integrity: sha512-LkNfB1iQlzypGq3PbrPOLKT6IdwEFw7AtHNnINYW+BafsWQ0A8CNMntH4j6lONWFVqz1W91PDxjOI38pK+S5Aw==}
+  /emoji-reaction@2.1.1(vue@3.2.45):
+    resolution: {integrity: sha512-Rn79P6PB6GbggHZp5Mszp2htAFdD4Erf7biFylZxoOSKJdjzWpxwqJ7+1PEBrMaeQ8rypmsY5rRZWpBSYPdbDw==}
     peerDependencies:
       vue: ^3.2.13
     dependencies:
