@@ -1,144 +1,29 @@
-@import "https://cdn.jsdelivr.net/npm/meslo@1.0.0/meslo.min.css";
-@import url('./atomic.css');
-
 :root {
   --tkzt-primary: #ddd6fe;
   --tkzt-primary-dark: #c4b5fd;
 }
 
 body {
-  font-family: meslo, "楷体";
-  margin: 0;
+  --at-apply: font-serif ma-0;
 }
 
-::-webkit-scrollbar {
-  width: 16px;
-  height: 16px;
+.caption {
+  --at-apply: dark:c-gray-400 c-gray-500 text-xs;
 }
 
-::-webkit-scrollbar-thumb {
-  border-radius: 1em;
-  background-color: rgba(0, 0, 0, 0.2);
-  border: 3px solid transparent;
-  background-clip: content-box;
+.text-btn {
+  --at-apply: cursor-pointer hover:underline decoration-none;
 }
 
-::-webkit-scrollbar-track {
-  background-color: rgba(0, 0, 0, 0.05);
+html.dark body {
+  --at-apply: bg-#272727 c-white;
 }
 
-.divider {
-  font-size: xx-small;
-  margin: 3.7vh 0;
+html.dark body {
+  color-scheme: dark;
 }
 
-.divider-filled {
-  font-size: xx-small;
-  margin: 3.7vh 0;
-  height: 12px;
-  margin-bottom: 0;
-}
-
-.divider-vertical {
-  font-size: xx-small;
-  margin: 0 1rem;
-  transform: rotate(90deg);
-  font-family: initial;
-}
-
-.divider-short-dash {
-  font-family: initial;
-  margin: 0 4px;
-}
-
-.text-link {
-  outline: none;
-  cursor: pointer;
-  color: inherit;
-  text-decoration: none;
-}
-
-.text-link:hover {
-  text-decoration: underline;
-}
-
-.icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 15px;
-  height: 15px;
-  padding: 3px;
-  border-radius: 50%;
-  cursor: pointer;
-  color: rgba(0, 0, 0, .27);
-}
-
-.icon:hover {
-  background-color: rgba(0, 0, 0, .06);
-}
-
-.icon-link {
-  height: 21px;
-  text-decoration: none;
-}
-
-
-.gray-text {
-  color: rgba(0, 0, 0, .37);
-  overflow: hidden;
-}
-
-.gray-text img {
-  position: relative;
-  transform: translateX(-100px);
-  filter: drop-shadow(rgba(0, 0, 0, .37) 100px 0 0);
-  border-left: 4px solid transparent;
-  border-right: 4px solid transparent;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --tkzt-primary-dark: #c4b5fd;
-    --tkzt-primary: #a78bfa;
-  }
-
-  body {
-    background-color: #272727;
-    color: white;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.3);
-  }
-
-  ::-webkit-scrollbar-track {
-    background-color: rgba(0, 0, 0, 0.1);
-  }
-
-  .icon {
-    color: rgba(255, 255, 255, .27);
-  }
-
-  .icon:hover {
-    background-color: rgba(255, 255, 255, .06);
-  }
-
-  .gray-text {
-    color: rgba(255, 255, 255, .37);
-  }
-
-  .gray-text img {
-    filter: drop-shadow(rgba(255, 255, 255, .37) 100px 0 0);
-  }
-
-  .gray-text h3 {
-    color: rgba(255, 255, 255, .37);
-  }
-}
-
-/* Waline Customizations */
-:root {
-  --waline-theme-color: var(--tkzt-primary) !important;
-  --waline-active-color: var(--tkzt-primary-dark) !important;
+html.dark body {
+  --tkzt-primary: #a78bfa;
+  --tkzt-primary-dark: #c4b5fd;
 }

@@ -1,4 +1,4 @@
-import { createRouter, createWebHashHistory } from 'vue-router';
+import { createRouter, createWebHashHistory } from 'vue-router'
 
 const routes = [
   {
@@ -22,18 +22,13 @@ const routes = [
     component: () => import('@/components/BoringBlogsView.vue'),
   },
   {
-    path: '/leave-a-message',
-    name: 'Leave A Message',
-    component: () => import('@/components/LeaveMessageView.vue'),
-  },
-  {
     path: '/contact',
     name: 'Contact',
     component: () => import('@/components/ContactView.vue'),
   },
-];
+]
 
 export default createRouter({
   routes,
   history: createWebHashHistory(),
-});
+})
