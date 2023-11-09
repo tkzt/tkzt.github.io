@@ -11,7 +11,7 @@
             class="link">蠡湖专科<i class="outlink">
             </i></a>，继而成为一名新生代农民工；目前在<a href="https://iot.tcl.com/" target="_blank"
             class="link">这个车间<i
-              class="outlink"></i></a>上班；生性胆小，爱好和平，不善表达，嗜睡，同时喜爱武侠与科幻；先后在南京、上海、无锡、上海痛恨、改造、亲手制造过若干座屎山，艰难积攒财富的同时，轻易地得到了肥胖、肩颈疾病、高血压；是一个<a
+              class="outlink"></i></a>上班；生性胆小，爱好和平，不善表达，嗜睡，同时喜爱武侠与科幻；先后在南京、上海、无锡、上海痛恨、改造、亲手堆砌过若干座屎山，艰难积攒财富的同时，轻易地得到了肥胖、肩颈疾病、高血压；是一个<a
             href="https://fine-weather-gallery.tkzt.cn" target="_blank" class="link">好天气摄影<i
               class="outlink"></i></a>爱好者；胡乱学过一些花拳绣腿，造了一些<router-link to="/boring-plans"
             class="link">玩具</router-link>；云顶之弈好玩赌狗阵容、饥荒里常选伍迪；由淮扬菜组成，更喜欢苏帮菜，最爱鸡蛋灌饼、煎饼馃子类食物；偶尔心血来潮，写一些<router-link
