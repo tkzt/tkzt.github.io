@@ -27,7 +27,7 @@ const loading = ref(false)
 
 onMounted(async () => {
   loading.value = true
-  const articlesFlattened = (await (await fetch('https://n-notes-crawling.tkzt.cn/blogs.json')).json())
+  const articlesFlattened = (await (await fetch('https://n-notes.tkzt.cn/blogs.json')).json())
   articles.value = articlesFlattened.sort(
     (a, b) => new Date(b.date) - new Date(a.date),
   ).reduce((pre, curr) => {
