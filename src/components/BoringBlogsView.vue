@@ -8,7 +8,7 @@
           <a :href="link" class="text-btn c-inherit" target="_blank">
             <span>
               <template v-if="date.match(/\d{4}-\d{2}-\d{2}/)">
-                {{ date.replace(/^\d{4}-/, '') }}
+                {{ date.match(/\d{2}-\d{2}/g, '').pop() }}
               </template>
               {{ title }}
             </span>
@@ -28,11 +28,10 @@ const loading = ref(false)
 onMounted(async () => {
   loading.value = true
   const articlesFlattened = (await (await fetch('https://n-notes.tkzt.cn/blogs.json')).json())
-  articles.value = articlesFlattened.sort(
-    (a, b) => new Date(b.date) - new Date(a.date),
-  ).reduce((pre, curr) => {
-    const year = new Date(curr.date)?.getFullYear() || curr.date
+  articles.value = articlesFlattened.reduce((pre, curr) => {
+    const year = new Date(curr.date)?.getFullYear() || "很久以前"
     const yearExists = pre.find((p) => p.year === year)
+    curr.date ??= ""
     if (yearExists) {
       yearExists.list.push(curr)
     } else {
