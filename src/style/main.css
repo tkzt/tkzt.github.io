@@ -5,6 +5,7 @@
 
 body {
   --at-apply: font-serif ma-0;
+  font-family: "source-han-serif-sc", serif;
 }
 
 .caption {
@@ -16,7 +17,7 @@ body {
 }
 
 html.dark body {
-  --at-apply: bg-#272727 c-white;
+  --at-apply: bg-#131130 c-white;
 }
 
 html.dark body {

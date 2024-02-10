@@ -6,7 +6,7 @@
         <div class="my-6 md:text-2xl text-xl">
           这是陶康的主页。此人：
         </div>
-        <div class="text-sm md:text-4">
+        <div class="text-sm md:text-4 lh-6.18 tracking-.37 text-justify">
           于 2019 年毕业于<a href="https://www.bing.com/search?q=%E8%A0%A1%E4%B8%93" target="_blank"
             class="link">蠡湖专科<i class="outlink">
             </i></a>，继而成为一名新生代农民工；目前在<a href="https://iot.tcl.com/" target="_blank"
@@ -28,7 +28,7 @@
     <div class="grow-1 items-center flex md:(justify-end md:mt-0) mt-6 justify-center">
       <div class="relative">
         <img src="https://images.tkzt.cn/fine-weather/thumbnail/1.jpg"
-          class="md:w-300px w-100% min-w-300px min-h-200px dark:bg-[rgba(0,0,0,.37)] bg-[rgba(0,0,0,.05)]" />
+          class="md:w-300px w-100% min-w-300px min-h-200px dark:bg-[rgba(0,0,0,.37)] bg-[rgba(0,0,0,.05)] rounded" />
         <div class="text-right caption mt-1 text-xs md:(text-sm mt-3)">
           2020
           <span class="mx-1">·</span>
@@ -48,8 +48,8 @@ import FingerprintJS from '@fingerprintjs/fingerprintjs'
 import { createClient } from '@supabase/supabase-js'
 import { useDark } from '@vueuse/core'
 
-const SUPABASE_URL = 'https://kjslqwyilnpzselvwdib.supabase.co'
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtqc2xxd3lpbG5wenNlbHZ3ZGliIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjkxODI0MjMsImV4cCI6MTk4NDc1ODQyM30.ePHLfYPvu4E5Ts_CVJo3wUXTnc6L0tEMuzQ-SX0bDDo'
+const SUPABASE_URL = 'https://cn1k1ka5g6h58d3qort0.baseapi.memfiredb.com'
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImV4cCI6MzI4NDA5NDkyOSwiaWF0IjoxNzA3Mjk0OTI5LCJpc3MiOiJzdXBhYmFzZSJ9.J3LRysizveBsrp5O5epNlgkMeMOwpvdi7RLB6Yfowpg'
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
 const isDark = useDark()

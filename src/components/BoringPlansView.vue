@@ -1,6 +1,7 @@
 <template>
   <template v-for="{ title, list }, index in  works" :key="index">
-    <boring-plans :list="list" :title="title" :class="{ 'mt-4': index > 0 }" />
+    <boring-plans :list="list" :title="title"
+      :class="{ 'mt-4': index > 0, 'mb-4': index === works.length - 1 }" />
   </template>
 </template>
 
@@ -9,14 +10,8 @@ import BoringPlans from './BoringPlans.vue'
 
 const works = [
   {
-    title: 'Building',
+    title: '🚧 构建',
     list: [
-      {
-        title: 'Qiuying RPA',
-        link: 'https://github.com/qiuying-rpa',
-        logo: 'https://raw.githubusercontent.com/qiuying-rpa/designer/f9650405849c730eaf6c25be049895c4f7d1df23/public/qiuying.svg',
-        description: '众所周知，秋英是一种有着小而美花的植物',
-      },
       {
         title: 'Multipaste',
         link: 'https://github.com/tkzt/multipaste',
@@ -26,7 +21,7 @@ const works = [
     ]
   },
   {
-    title: 'Alive',
+    title: '🥳 存活',
     list: [
       {
         title: 'Boring Days',
@@ -73,13 +68,19 @@ const works = [
     ]
   },
   {
-    title: 'Dead',
+    title: '☠️ 死亡',
     list: [
       {
         title: 'TMD Editor',
         link: 'https://github.com/tkzt/tmd-editor',
         logo: 'https://raw.githubusercontent.com/tkzt/tmd-editor/263a9a01078712eb0ca4c4a6f2d7a3f71504e0d7/public/tmd.svg',
         description: 'A simple ProseMirror based markdown editor.',
+      },
+      {
+        title: 'Qiuying RPA',
+        link: 'https://github.com/qiuying-rpa',
+        logo: 'https://raw.githubusercontent.com/qiuying-rpa/designer/f9650405849c730eaf6c25be049895c4f7d1df23/public/qiuying.svg',
+        description: '众所周知，秋英是一种有着小而美花的植物',
       },
     ],
     extraClass: 'gray-text'

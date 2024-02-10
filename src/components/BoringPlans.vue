@@ -1,17 +1,16 @@
 <template>
   <div>
-    <div v-if="title" class="mb-4">{{ title }}</div>
-    <div class="flex flex-wrap">
-      <div class="work" :class="{ dead: title.toLowerCase() === 'dead' }"
-        v-for=" { title, link, description, logo }, index  in list" :key="index"
+    <div v-if="title" class="mb-4 font-bold">{{ title }}</div>
+    <div class="flex flex-wrap" :class="{ dead: title === '死亡' }">
+      <div class="work" v-for=" { title, link, description, logo }, index  in list" :key="index"
         @click="toWork(link)">
-        <img :src="logo" v-if="logo.startsWith('http')">
+        <img :src="logo" v-if="logo.startsWith('http')" class="rounded-full">
         <div v-else class="logo">
           <span class="scale-80">{{ logo }}</span>
         </div>
-        <div class="pl-2 box-border grow-1 overflow-hidden">
-          <div :title="title" class="text-truncate text-sm md:text-4">{{ title }}</div>
-          <div :title="description" class="text-xs md:text-sm text-truncate">{{ description }}
+        <div class="pl-2 box-border grow-1 overflow-hidden text-xs md:text-sm">
+          <div :title="title" class="text-truncate">{{ title }}</div>
+          <div :title="description" class="text-truncate">{{ description }}
           </div>
         </div>
       </div>
@@ -43,13 +42,17 @@ function toWork(link) {
   --at-apply: w-8 h-8;
 }
 
+.dead {
+  --at-apply: opacity-60;
+}
+
 .dead img {
-  --at-apply: filter-grayscale;
+  --at-apply: filter-grayscale-100 opacity-50;
 }
 
 .work .logo {
-  --at-apply: "w-8 h-8 text-xs shrink-0 bg-[rgba(162,96,209,0.25)] rd-50%";
-  --at-apply: "flex items-center justify-center c-[rgba(65,73,84)] font-bold";
-  --at-apply: "dark:bg-[rgba(162,96,209,0.37)] dark:c-[rgba(255,255,255,.8)]"
+  --at-apply: "w-8 h-8 text-xs shrink-0 bg-[rgba(162,96,209,0.12)] rd-50%";
+  --at-apply: "flex items-center justify-center c-slate-900 font-bold";
+  --at-apply: "dark:bg-[rgba(162,96,209,0.12)] dark:c-slate-200"
 }
 </style>
